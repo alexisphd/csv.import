@@ -16,7 +16,7 @@ use App\Imports\UsersImport;
 */
 
 Route::get('/', function () {
-    return view('welcome', [
+    return view('updated', [
         'users'=>App\Models\User::all()
     ]);
 });
