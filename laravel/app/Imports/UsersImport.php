@@ -37,7 +37,7 @@ class UsersImport implements ToModel, WithStartRow, WithCustomCsvSettings
     {
 
         $user= new User([
-            'Код'=>$row[0],
+            'Код'=>str_replace('"', '', $row[0]),
             'Наименование'=>$row[1],
             'Уровень1'=>$row[2],
             'Уровень2'=>$row[3],
